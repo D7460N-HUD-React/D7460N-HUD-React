@@ -1,0 +1,128 @@
+tbody tr.active {
+  background-color: var(--bs-table-active-bg);
+  transition: var(--bs-table-active-bg) 250ms;
+}
+
+accordion {
+  --bs-accordion-bg: transparent;
+  --bs-body-bg: transparent;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-border-width: none;
+
+  --bs-accordion-border-color: transparent;
+  --bs-border-color: transparent;
+}
+
+/* Hide left sidebar toggle */
+.desktop-toggler {
+  display: none !important;
+}
+
+.intro > .card {
+  margin-block: 2rem;
+}
+
+/* Display .intro unless there are search results */
+#searchTab:has(.table-responsive table tbody tr) .intro {
+  display: none;
+}
+
+/* If table tbody doesn't have a tr, don't show .table-responsive */
+body:not(:has(.table-responsive table tbody tr)) .table-responsive {display: none;}
+
+/* Display .intro unless there are search results */
+#searchTab:has(.table-responsive table body tr) .intro {
+  display: none;
+}
+
+/* Hide table header unless there are search results */
+@searchTab .table-responsive table thead {display: none !important;}
+
+#searchTab:has(.table-responsive table body tr) #searchTab .table-responsive table thead {
+  display: inherit;
+}
+
+mark,
+.mark {
+  border-radius: .3rem;
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+  margin-bottom: inherit;
+}
+
+/* Turn off borders */
+.intro .card .card:not(.border-0)::before {
+  border-top: 1px solid rgba(var(--bs-border-color-rgb), 0.0);
+  border-bottom: 1px solid rgba(var(--bs-border-color-rgb), 0.0);
+}
+
+/* Turn off borders */
+.intro .card .card:not(.border-0)::after {
+  border-top: 1px solid rgba(var(--bs-border-color-rgb), 0.0);
+  border-bottom: 1px solid rgba(var(--bs-border-color-rgb), 0.0);
+}
+
+/* Bigger corner */
+.intro .card .card .card-arrow-top-left::before,
+.intro .card .card .card-arrow-top-right::before,
+.intro .card .card .card-arrow-bottom-left::before,
+.intro .card .card .card-arrow-bottom-right::before {
+  width: 4px;
+  height: 12px;
+}
+
+/* Bigger corner */
+.intro .card .card .card-arrow-top-left::after,
+.intro .card .card .card-arrow-top-right::after,
+.intro .card .card .card-arrow-bottom-left::after,
+.intro .card .card .card-arrow-bottom-right::after {
+  width: 16px;
+  height: 4px;
+}
+
+/* Adjust corner */
+.intro .card .card .card-arrow-top-left::before,
+.intro .card .card .card-arrow-top-right::before {
+  top: 4px;
+}
+
+/* Adjust corner */
+.intro .card .card .card-arrow-top-left::after,
+.intro .card .card .card-arrow-top-right::after {
+  top: 0;
+}
+
+/* Adjust corner */
+.intro .card .card .card-arrow-bottom-left::before,
+.intro .card .card .card-arrow-bottom-right::before {
+  bottom: 4px;
+}
+
+/* Adjust corner */
+.intro .card .card .card-arrow-bottom-left::after,
+.intro .card .card .card-arrow-bottom-right::after {
+  bottom: 0;
+}
+
+.gl-2 {
+  padding: 0.1rem 1rem;
+}
+
+.gl-2:hover,
+.card-arrow:hover {
+  -webkit-animation: entrance 600ms 1400ms linear backwards 1 !important;
+  animation: entrance 600ms 1400ms linear backwards 1 !important;
+}
+
+.entrance {
+  -webkit-animation: entrance 600ms 1400ms linear backwards 1 !important;
+  animation: entrance 600ms 1400ms linear backwards 1 !important;
+}
+
+
+
+
+
+
